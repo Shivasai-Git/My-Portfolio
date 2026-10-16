@@ -53,7 +53,9 @@ svg { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1
 @keyframes glow { to { transform: scale(1.25); opacity: .6; } }
 /* Name intro stage: font-size is set from the hero title so the final glide lands exactly on it. */
 .intro-stage { position: absolute; display: flex; font-weight: 900; line-height: 1; letter-spacing: -.055em; white-space: nowrap; perspective: 600px; }
-.intro-stage span { display: inline-block; opacity: 0; color: rgba(255,255,255,.01); background: linear-gradient(180deg, #fff 0%, #d1d5db 45%, #374151 100%); -webkit-background-clip: text; background-clip: text; will-change: transform; }
+/* Letter-spacing would shrink each box narrower than its glyph and clip the gradient on the right;
+   padding widens the painted box while the negative margin keeps the same tight spacing. */
+.intro-stage span { letter-spacing: 0; padding: 0 .1em; margin: 0 calc(-.1em - .055em) 0 -.1em; display: inline-block; opacity: 0; color: rgba(255,255,255,.01); background: linear-gradient(180deg, #fff 0%, #d1d5db 45%, #374151 100%); -webkit-background-clip: text; background-clip: text; will-change: transform; }
 .intro-ball { position: absolute; border-radius: 50%; background: #f4f4f4; opacity: 0; box-shadow: 0 0 18px rgba(255,255,255,.35); }
 .intro-glow { position: absolute; width: 420px; height: 420px; margin: -210px 0 0 -210px; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,.13), transparent 65%); opacity: 0; pointer-events: none; }
 .preloader.reveal { background: transparent; transition: background .45s ease, opacity .7s ease, visibility .7s; }
