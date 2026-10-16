@@ -62,7 +62,7 @@ export default function Page() {
       <div className="preloader" aria-hidden="true">
         <div className="preloader-glow" />
         <p className="preloader-greet"><span>Hello</span></p>
-        <div className="preloader-word">{[...'SHIVASAI'].map((ch, i) => <span key={i}>{ch}</span>)}</div>
+        <div className="intro-stage" />
       </div>
 
       <header className="site-header">

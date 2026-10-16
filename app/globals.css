@@ -40,19 +40,24 @@ svg { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1
 .preloader { position: fixed; inset: 0; z-index: 150; display: grid; place-items: center; background: #0a0a0a; transition: opacity .7s ease, visibility .7s; }
 .preloader-glow { position: absolute; width: 340px; height: 340px; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,.14), transparent 65%); animation: glow 2.2s ease-in-out infinite alternate; }
 .preloader-greet { position: absolute; display: flex; align-items: baseline; white-space: nowrap; font-size: clamp(34px, 6vw, 72px); font-weight: 500; letter-spacing: -.03em; color: #f2f2f2; transition: opacity .35s, transform .35s; }
-.preloader-greet span { display: inline-block; white-space: pre; opacity: 0; animation: greet .42s cubic-bezier(.2, .8, .2, 1) forwards; }
-.preloader.name .preloader-greet { opacity: 0; transform: translateY(-30px); }
-@keyframes greet { from { opacity: 0; transform: translateY(55%) rotate(8deg); filter: blur(8px); } to { opacity: 1; transform: none; filter: none; } }
-.preloader-word { position: relative; display: flex; font-weight: 900; font-size: clamp(48px, 11vw, 140px); letter-spacing: -.04em; }
-.preloader-word span { display: inline-block; color: transparent; background: linear-gradient(180deg, #fff, #9ca3af 60%, #374151); -webkit-background-clip: text; background-clip: text; opacity: 0; transform: translateY(-120%) rotate(-25deg); }
-.preloader.name .preloader-word span { animation: drop .7s cubic-bezier(.3, 1.4, .5, 1) forwards; }
-.preloader-word span:nth-child(1) { animation-delay: .05s; } .preloader-word span:nth-child(2) { animation-delay: .13s; }
-.preloader-word span:nth-child(3) { animation-delay: .21s; } .preloader-word span:nth-child(4) { animation-delay: .29s; }
-.preloader-word span:nth-child(5) { animation-delay: .37s; } .preloader-word span:nth-child(6) { animation-delay: .45s; }
-.preloader-word span:nth-child(7) { animation-delay: .53s; } .preloader-word span:nth-child(8) { animation-delay: .61s; }
-body.loaded .preloader { opacity: 0; visibility: hidden; }
-@keyframes drop { 60% { opacity: 1; } to { opacity: 1; transform: none; } }
+.preloader-greet span { display: inline-block; white-space: pre; opacity: 0; transform-origin: 50% 100%; animation: greet .62s cubic-bezier(.3, 0, .3, 1) forwards; }
+.preloader.intro .preloader-greet, .preloader.intro .preloader-glow { opacity: 0; transform: translateY(-30px); transition: opacity .3s, transform .3s; }
+/* Letters fall from above, tumble, land with a squash and settle — like the reference intro. */
+@keyframes greet {
+  0% { opacity: 0; transform: translateY(-140%) rotate(-28deg); }
+  45% { opacity: 1; transform: translateY(0) rotate(4deg) scaleY(.86); }
+  65% { transform: translateY(-12%) rotate(-2deg) scaleY(1.04); }
+  82% { transform: translateY(0) scaleY(.97); }
+  100% { opacity: 1; transform: none; }
+}
 @keyframes glow { to { transform: scale(1.25); opacity: .6; } }
+/* Name intro stage: font-size is set from the hero title so the final glide lands exactly on it. */
+.intro-stage { position: absolute; display: flex; font-weight: 900; line-height: 1; letter-spacing: -.055em; white-space: nowrap; perspective: 600px; }
+.intro-stage span { display: inline-block; opacity: 0; color: rgba(255,255,255,.01); background: linear-gradient(180deg, #fff 0%, #d1d5db 45%, #374151 100%); -webkit-background-clip: text; background-clip: text; will-change: transform; }
+.intro-ball { position: absolute; border-radius: 50%; background: #f4f4f4; opacity: 0; box-shadow: 0 0 18px rgba(255,255,255,.35); }
+.intro-glow { position: absolute; width: 420px; height: 420px; margin: -210px 0 0 -210px; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,.13), transparent 65%); opacity: 0; pointer-events: none; }
+.preloader.reveal { background: transparent; transition: background .45s ease, opacity .7s ease, visibility .7s; }
+body.loaded .preloader { opacity: 0; visibility: hidden; }
 
 /* ---------- Header ---------- */
 .site-header { position: fixed; inset: 0 0 auto; z-index: 50; height: var(--header); display: flex; align-items: center; gap: 32px; padding-inline: 48px; transition: background .35s, border-color .35s; border-bottom: 1px solid transparent; }
