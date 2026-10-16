@@ -1,0 +1,21 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "feature/ehub-project",
+    "fix/hero-portrait-scroll",
+    "main",
+    "origin"
+  ],
+  "parent": {
+    "feature/ehub-project": "main",
+    "fix/hero-portrait-scroll": "main",
+    "main": null,
+    "origin": "main"
+  },
+  "order": [
+    "main",
+    "feature/ehub-project",
+    "fix/hero-portrait-scroll",
+    "origin"
+  ]
+}
