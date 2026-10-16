@@ -23,4 +23,4 @@ Native dialogs support Escape and focus containment. The certificate gallery wor
 
 ## Content boundaries
 
-Use the verified aspiring developer headline, skills, Warangal location, two education entries, and four certificate posts. Selected learning replaces unverified project claims. Contact uses the supplied public LinkedIn profile and its verified email address. No invented employment, testimonials, availability, metrics, projects, or private contact information.
+Use the verified aspiring developer headline, skills, Warangal location, two education entries, and the certificate posts. The Projects section features one project only — eHub (live at ehub-64.vercel.app) — with facts taken from its own trailer, story video and source; the GitHub link points to the public profile github.com/Shivasai-Git. Videos are self-hosted in public/video as faststart H.264, loaded with preload="none"; the loop clip plays only while on screen and never under reduced motion or Save-Data. Contact uses the supplied public LinkedIn profile and its verified email address. No invented employment, testimonials, availability, metrics, projects, or private contact information.
