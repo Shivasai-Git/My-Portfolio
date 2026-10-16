@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="Shivasai Aillaboina, aspiring full stack developer working with React.js, Node.js, and Python.">
+  <meta property="og:title" content="Shivasai Aillaboina | Portfolio">
+  <meta property="og:description" content="Aspiring full stack developer. React.js, Node.js, Python.">
+  <meta property="og:type" content="website">
+  <title>Shivasai Aillaboina | Portfolio</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23050505'/%3E%3Ctext x='32' y='45' font-family='Arial' font-weight='900' font-size='38' text-anchor='middle' fill='%23fff'%3ES%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="preload" href="assets/portrait-cutout.png" as="image">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body class="is-loading">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader-glow"></div>
+    <p class="preloader-greet"><i></i><span>Hello</span></p>
+    <div class="preloader-word"><span>S</span><span>H</span><span>I</span><span>V</span><span>A</span><span>S</span><span>A</span><span>I</span></div>
+  </div>
+
+  <header class="site-header">
+    <a class="wordmark" href="#home"><span class="wordmark-full">SHIVASAI AILLABOINA</span><span class="wordmark-short">SHIVASAI</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#home" data-nav="home">Home</a>
+      <a href="#about" data-nav="about">About</a>
+      <a href="#learning" data-nav="learning">Learning</a>
+      <a href="#certificates" data-nav="certificates">Certificates</a>
+      <a href="#journey" data-nav="journey">Journey</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </nav>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+    <span class="scroll-progress" aria-hidden="true"></span>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav aria-label="Mobile navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#learning">Learning</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <canvas class="hero-stars" aria-hidden="true"></canvas>
+      <canvas class="hero-portrait" aria-hidden="true"></canvas>
+      <img class="portrait-source" id="portrait-source" src="assets/portrait-cutout.png" alt="Portrait of Shivasai Aillaboina" width="1254" height="1254">
+      <div class="hero-content">
+        <h1 id="hero-title" class="hero-title metal">PORTFOLIO</h1>
+        <div class="hero-bottom">
+          <p class="hero-role"><strong>Full Stack</strong> <em>Developer</em></p>
+          <div class="hero-actions">
+            <a class="round-btn" href="#about" aria-label="Scroll to about section"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 7 7 17M7 9v8h8"/></svg></a>
+            <a class="ghost-pill" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="about-grid container">
+        <div class="about-head">
+          <span class="eyebrow">About me</span>
+          <h2 id="about-title" class="intro-word metal" data-fade>Intro</h2>
+        </div>
+        <div class="about-card" data-fade>
+          <p class="word-reveal">Hey, I'm <b>Shivasai.</b> An aspiring <b>full stack developer</b> from Warangal, Telangana, learning to build scalable web applications end to end. I'm working through the <b>NxtWave CCBP 4.0 Academy</b> while studying at <b>Vaagdevi College of Engineering</b> — from responsive layouts in <b>HTML, CSS and Bootstrap</b> to interactive apps in <b>JavaScript</b> and <b>React.js</b>, with <b>Node.js, Python and SQL</b> powering what happens behind the screen.</p>
+        </div>
+      </div>
+      <div class="stack container-wide">
+        <div class="stack-label"><span class="eyebrow">The stack</span><span class="rule"></span></div>
+        <div class="marquee" data-direction="left">
+          <ul class="marquee-track">
+            <li>HTML5</li><li>CSS3</li><li>CSS Flexbox</li><li>Bootstrap</li><li>JavaScript</li><li>React.js</li><li>Responsive Design</li><li>Node.js</li>
+          </ul>
+        </div>
+        <div class="marquee" data-direction="right">
+          <ul class="marquee-track">
+            <li>Python</li><li>SQL</li><li>C</li><li>Git</li><li>GitHub</li><li>VS Code</li><li>REST APIs</li><li>Problem Solving</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEARNING (services equivalent) -->
+    <section class="learning" id="learning" aria-labelledby="learning-title">
+      <div class="learning-head container">
+        <h2 id="learning-title" class="lines-heading" data-lines><span><span class="metal">WHAT I'M</span></span><span><span class="metal">LEARNING</span></span></h2>
+      </div>
+      <div class="service-list">
+        <article class="service-row">
+          <button class="service-toggle" type="button" aria-expanded="false"><span class="service-num">01</span><span class="service-name">Frontend Development</span><svg class="service-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 9v8H9"/></svg></button>
+          <div class="service-body"><ul><li>Semantic HTML and modern CSS layouts</li><li>CSS Flexbox and Bootstrap grids</li><li>Responsive, mobile-first web pages</li></ul></div>
+        </article>
+        <article class="service-row">
+          <button class="service-toggle" type="button" aria-expanded="false"><span class="service-num">02</span><span class="service-name">Interactive Apps with JavaScript</span><svg class="service-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 9v8H9"/></svg></button>
+          <div class="service-body"><ul><li>DOM manipulation and events</li><li>Fetching data from APIs</li><li>Dynamic web applications</li></ul></div>
+        </article>
+        <article class="service-row">
+          <button class="service-toggle" type="button" aria-expanded="false"><span class="service-num">03</span><span class="service-name">React.js Interfaces</span><svg class="service-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 9v8H9"/></svg></button>
+          <div class="service-body"><ul><li>Components, props and state</li><li>Routing and reusable UI</li><li>Thinking in components</li></ul></div>
+        </article>
+        <article class="service-row">
+          <button class="service-toggle" type="button" aria-expanded="false"><span class="service-num">04</span><span class="service-name">Backend with Node.js &amp; SQL</span><svg class="service-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 9v8H9"/></svg></button>
+          <div class="service-body"><ul><li>Server-side JavaScript with Node.js</li><li>Relational databases and SQL queries</li><li>Connecting frontend to backend</li></ul></div>
+        </article>
+        <article class="service-row">
+          <button class="service-toggle" type="button" aria-expanded="false"><span class="service-num">05</span><span class="service-name">Programming Foundations</span><svg class="service-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 9v8H9"/></svg></button>
+          <div class="service-body"><ul><li>Python and C fundamentals</li><li>Programming logic and problem solving</li><li>Clean, readable code habits</li></ul></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES (projects equivalent) -->
+    <section class="projects" id="certificates" aria-labelledby="certificates-title">
+      <div class="container projects-head">
+        <span class="eyebrow">Selected learning</span>
+        <h2 id="certificates-title" class="lines-heading lines-left" data-lines><span><span class="metal">CERTI</span></span><span><span class="metal">FICATES</span></span></h2>
+      </div>
+
+      <article class="project container" data-fade>
+        <button class="project-media" type="button" data-cert="0" aria-label="View Static Website certificate"><img src="assets/cert-static.jpg" alt="Build Your Own Static Website certificate" width="491" height="347" loading="lazy"></button>
+        <div class="project-text">
+          <span class="project-num">01</span>
+          <h3 class="project-title">YOUR OWN <em>static</em><br>WEBSITE</h3>
+          <p>Build Your Own Static Website — structuring pages with HTML, styling them with CSS and laying them out with Bootstrap. Issued 27 May 2025 by NxtWave.</p>
+          <div class="btn-row"><button class="solid-pill" type="button" data-cert="0">View certificate <span aria-hidden="true">↗</span></button><a class="outline-pill" href="https://www.linkedin.com/feed/update/urn:li:activity:7452620065113264129/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </article>
+
+      <article class="project container reverse" data-fade>
+        <button class="project-media" type="button" data-cert="1" aria-label="View Python certificate"><img src="assets/cert-python.jpg" alt="Programming Foundations with Python certificate" width="491" height="347" loading="lazy"></button>
+        <div class="project-text">
+          <span class="project-num">02</span>
+          <h3 class="project-title">PYTHON <em>programming</em><br>FOUNDATIONS</h3>
+          <p>Programming Foundations with Python — variables, conditions, loops, functions and the problem-solving habits behind every program. Issued 2 June 2025 by NxtWave.</p>
+          <div class="btn-row"><button class="solid-pill" type="button" data-cert="1">View certificate <span aria-hidden="true">↗</span></button><a class="outline-pill" href="https://www.linkedin.com/feed/update/urn:li:activity:7452618755001716736/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </article>
+
+      <article class="project container" data-fade>
+        <button class="project-media" type="button" data-cert="2" aria-label="View Dynamic Web Application certificate"><img src="assets/cert-dynamic.jpg" alt="Build Your Own Dynamic Web Application certificate" width="491" height="347" loading="lazy"></button>
+        <div class="project-text">
+          <span class="project-num">03</span>
+          <h3 class="project-title">YOUR OWN <em>dynamic</em><br>WEB APP</h3>
+          <p>Build Your Own Dynamic Web Application — bringing pages to life with JavaScript, events, the DOM and data from APIs. Issued 27 September 2025 by NxtWave.</p>
+          <div class="btn-row"><button class="solid-pill" type="button" data-cert="2">View certificate <span aria-hidden="true">↗</span></button><a class="outline-pill" href="https://www.linkedin.com/feed/update/urn:li:activity:7452619777413595136/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </article>
+
+      <article class="project container reverse" data-fade>
+        <button class="project-media" type="button" data-cert="3" aria-label="View Responsive Website certificate"><img src="assets/cert-responsive.jpg" alt="Build Your Own Responsive Website certificate" width="491" height="347" loading="lazy"></button>
+        <div class="project-text">
+          <span class="project-num">04</span>
+          <h3 class="project-title">YOUR OWN <em>responsive</em><br>WEBSITE</h3>
+          <p>Build Your Own Responsive Website — layouts that adapt from phones to wide screens with Flexbox, media queries and a mobile-first approach. Issued 2 December 2025 by NxtWave.</p>
+          <div class="btn-row"><button class="solid-pill" type="button" data-cert="3">View certificate <span aria-hidden="true">↗</span></button><a class="outline-pill" href="https://www.linkedin.com/feed/update/urn:li:activity:7452619280371818496/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </article>
+    </section>
+
+    <!-- JOURNEY (components shelf equivalent) -->
+    <section class="journey" id="journey" aria-labelledby="journey-title">
+      <div class="journey-sticky">
+        <div class="journey-inner container">
+          <aside class="journey-side">
+            <div class="journey-panel">
+              <h2 id="journey-title">Always a student, one step at a time.</h2>
+              <p>Two places of learning and four milestones so far — every one of them a new way to bring an idea to life.</p>
+            </div>
+            <div class="journey-panel journey-cta">
+              <a class="square-btn solid" href="#certificates">See certificates <span aria-hidden="true">↗</span></a>
+              <a class="square-btn" href="#contact">Message me</a>
+            </div>
+          </aside>
+          <div class="journey-shelf">
+            <ol class="journey-track">
+              <li class="journey-card"><span class="tag">Jul 2024</span><div class="journey-screen"><span class="mono">fellow · ccbp 4.0</span><strong>NxtWave</strong></div><div class="journey-meta"><h3>NxtWave</h3><p>Fellow · CCBP 4.0 Academy</p><span class="mono">Jul 2024 — Dec 2028</span></div></li>
+              <li class="journey-card"><span class="tag">2024</span><div class="journey-screen"><span class="mono">engineering</span><strong>Vaagdevi</strong></div><div class="journey-meta"><h3>Vaagdevi College of Engineering</h3><p>Engineering studies</p><span class="mono">2024 — 2028</span></div></li>
+              <li class="journey-card"><span class="tag">May 2025</span><div class="journey-screen"><span class="mono">html · css · bootstrap</span><strong>Static</strong></div><div class="journey-meta"><h3>Static Website</h3><p>First certificate</p><span class="mono">27 May 2025</span></div></li>
+              <li class="journey-card"><span class="tag">Jun 2025</span><div class="journey-screen"><span class="mono">python</span><strong>Python</strong></div><div class="journey-meta"><h3>Programming Foundations</h3><p>Python logic</p><span class="mono">2 Jun 2025</span></div></li>
+              <li class="journey-card"><span class="tag">Sep 2025</span><div class="journey-screen"><span class="mono">javascript · dom</span><strong>Dynamic</strong></div><div class="journey-meta"><h3>Dynamic Web Application</h3><p>Interactive JavaScript</p><span class="mono">27 Sep 2025</span></div></li>
+              <li class="journey-card"><span class="tag">Dec 2025</span><div class="journey-screen"><span class="mono">flexbox · media queries</span><strong>Responsive</strong></div><div class="journey-meta"><h3>Responsive Website</h3><p>Mobile-first layouts</p><span class="mono">2 Dec 2025</span></div></li>
+              <li class="journey-card next"><span class="tag">Next</span><div class="journey-screen"><span class="mono">react · node · sql</span><strong>Full stack</strong></div><div class="journey-meta"><h3>What's next</h3><p>Complete full stack web apps</p><span class="mono">In progress</span></div></li>
+            </ol>
+            <div class="journey-foot"><span class="journey-dots" aria-hidden="true"></span><span class="mono accent">↓ Scroll to move the shelf</span><span class="mono journey-count" aria-hidden="true">1 / 7</span></div>
+          </div>
+        </div>
+        <div class="journey-progress container" aria-hidden="true"><span class="mono">Scroll = shelf</span><span class="journey-bar"><i></i></span><span class="mono journey-p">P 0.00</span></div>
+      </div>
+    </section>
+
+    <!-- PLAY -->
+    <section class="play" id="play" aria-labelledby="play-title">
+      <div class="container play-inner">
+        <h2 id="play-title" class="play-caption">Break it if you can. It still ships.</h2>
+        <canvas class="breakout" aria-label="Breakout game spelling HELLO WORLD. Press Play, then move the mouse or your finger, or use the arrow keys, to control the paddle." role="img"></canvas>
+        <button class="play-btn" type="button">PLAY</button>
+        <p class="play-status mono" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <canvas class="smoke" aria-hidden="true"></canvas>
+      <div class="contact-grid container">
+        <div class="contact-left" data-fade>
+          <span class="status-pill"><i></i>Let's connect</span>
+          <h2 id="contact-title" class="metal contact-title">Get in touch</h2>
+          <p>Ideas, opportunities, internships or just a hello — I'd love to hear from you. Email gets the fastest reply.</p>
+          <div class="btn-row"><a class="solid-pill" href="mailto:saillaboina@gmail.com">Send an email <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a><a class="outline-pill" href="https://www.linkedin.com/in/shivasai-aillaboina-576900318/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <dl class="contact-card" data-fade>
+          <div><dt>Email</dt><dd><a href="mailto:saillaboina@gmail.com">saillaboina@gmail.com</a></dd></div>
+          <div><dt>Based in</dt><dd>Warangal Urban, Telangana, India</dd></div>
+          <div><dt>Learning at</dt><dd>NxtWave CCBP 4.0 · Vaagdevi College of Engineering</dd></div>
+          <div><dt>Elsewhere</dt><dd class="socials"><a class="icon-btn" href="https://www.linkedin.com/in/shivasai-aillaboina-576900318/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9v9M6 6v.01M10 18v-5a3 3 0 0 1 6 0v5M10 9v9"/></svg></a><a class="icon-btn" href="mailto:saillaboina@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a></dd></div>
+        </dl>
+      </div>
+      <footer class="site-footer container">
+        <p>© <span id="year">2026</span> Shivasai Aillaboina. All rights reserved.</p>
+        <nav aria-label="Footer"><a href="#home">Home</a><a href="#about">About</a><a href="#learning">Learning</a><a href="#certificates">Certificates</a></nav>
+      </footer>
+    </section>
+  </main>
+
+  <dialog class="cert-dialog" id="cert-dialog" aria-labelledby="cert-dialog-title">
+    <div class="cert-dialog-head"><h2 id="cert-dialog-title">Certificate</h2><button class="icon-btn dialog-close" type="button" aria-label="Close certificate">×</button></div>
+    <img id="cert-dialog-img" src="assets/cert-static.jpg" alt="" width="491" height="347">
+    <a class="outline-pill" id="cert-dialog-link" href="#" target="_blank" rel="noopener noreferrer">View original LinkedIn post <span aria-hidden="true">↗</span></a>
+  </dialog>
+</body>
+</html>
