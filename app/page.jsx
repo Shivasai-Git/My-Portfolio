@@ -2,9 +2,11 @@ import PortfolioEffects from '../components/PortfolioEffects';
 
 const LINKEDIN = 'https://www.linkedin.com/in/shivasai-aillaboina-576900318/';
 const EMAIL = 'saillaboina@gmail.com';
+const GITHUB = 'https://github.com/Shivasai-Git';
+const EHUB_LIVE = 'https://ehub-64.vercel.app/';
 
 const NAV = [
-  ['home', 'Home'], ['about', 'About'], ['learning', 'Learning'],
+  ['home', 'Home'], ['about', 'About'], ['projects', 'Projects'], ['learning', 'Learning'],
   ['certificates', 'Certificates'], ['journey', 'Journey'], ['contact', 'Contact'],
 ];
 
@@ -48,6 +50,33 @@ const JOURNEY = [
   { tag: 'Next', mono: 'react · node · sql', big: 'Full stack', title: "What's next", sub: 'Complete full stack web apps', date: 'In progress', next: true },
 ];
 
+// Swap these src values for a CDN URL (e.g. Cloudinary) without touching the markup.
+const EHUB_VIDEOS = [
+  { id: 'trailer', label: 'Product trailer', len: '3:47', src: '/video/ehub-trailer-1080.mp4', poster: 'ehub-trailer' },
+  { id: 'story', label: 'Animated story', len: '1:15', src: '/video/ehub-story-1080.mp4', poster: 'ehub-story' },
+];
+
+const EHUB_FLOW = [
+  ['Discover', 'Events in every student’s feed'],
+  ['Register & pay', 'Razorpay, or UPI with proof'],
+  ['Teams', 'One invite code, roster confirmed'],
+  ['Check-in', 'Signed QR pass scanned at the gate'],
+  ['Judging', 'Private link, clear rubric'],
+  ['Certify', 'Issued only to verified attendees'],
+];
+
+const EHUB_FEATURES = [
+  ['01', 'Payments with receipts', 'Razorpay for card, UPI and netbanking — or UPI with uploaded proof, reviewed in one organizer queue.'],
+  ['02', 'Signed QR passes', 'Camera-first gate check-in on any phone. No proxies, no new hardware.'],
+  ['03', 'Live attendance', 'Who’s in, who’s absent — filtered by team, synced across every device.'],
+  ['04', 'Fair, private judging', 'Each judge gets a private link and a rubric; scores tracked per team.'],
+  ['05', 'Verifiable certificates', 'Designed in minutes, issued to attendees only, checkable by anyone via link or QR.'],
+  ['06', 'Roles & waitlists', 'Admins, coordinators, judges and volunteers each in their lane; smart waitlist promotion.'],
+];
+
+const EHUB_STACK = ['React 19', 'TypeScript', 'Vite', 'React Router 7', 'TanStack Query', 'React-Bootstrap', 'SCSS', 'Razorpay'];
+
+const GitHubIcon = () => <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" /></svg>;
 const Arrow = () => <svg className="service-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 9v8H9" /></svg>;
 const MailIcon = () => <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>;
 const External = ({ href, className, children, ...rest }) => (
@@ -114,6 +143,104 @@ export default function Page() {
             <div className="marquee" data-direction="left"><ul className="marquee-track">{STACK_TOP.map((s) => <li key={s}>{s}</li>)}</ul></div>
             <div className="marquee" data-direction="right"><ul className="marquee-track">{STACK_BOTTOM.map((s) => <li key={s}>{s}</li>)}</ul></div>
           </div>
+        </section>
+
+        {/* PROJECTS */}
+        <section className="work" id="projects" aria-labelledby="projects-title">
+          <div className="container work-head">
+            <span className="eyebrow">Selected work</span>
+            <h2 id="projects-title" className="lines-heading lines-left lines-wide" data-lines=""><span><span className="metal">MY</span></span><span><span className="metal">PROJECTS</span></span></h2>
+          </div>
+
+        <article className="ehub" id="ehub" aria-labelledby="ehub-title">
+          <div className="container ehub-head">
+            <span className="project-num">01 — Flagship project</span>
+            <h3 id="ehub-title" className="lines-heading ehub-title" data-lines=""><span><span className="metal">eHub</span></span></h3>
+            <p className="ehub-tagline" data-fade="">Every campus event. <em>One verified record.</em></p>
+            <p className="ehub-lede" data-fade="">A web platform that runs the full life cycle of a college event — discovery, registration, teams, payments, signed QR passes, gate check-in, judging, and certificates issued only to students who actually attended, which anyone can verify online.</p>
+            <dl className="ehub-meta" data-fade="">
+              <div><dt>Type</dt><dd>Web platform · works on any phone</dd></div>
+              <div><dt>Status</dt><dd><i className="live-dot" />Live since October 2026</dd></div>
+              <div><dt>Built for</dt><dd>Seva First Innovation Challenge 2026</dd></div>
+              <div><dt>Users</dt><dd>Students, organizers, judges, admins</dd></div>
+            </dl>
+          </div>
+
+          <div className="ehub-stage-wrap container">
+            <div className="ehub-stage" data-fade="">
+              <div className="ehub-screen">
+                <video className="ehub-loop" muted playsInline loop preload="none" poster="/images/ehub-trailer-960.webp" aria-hidden="true" tabIndex={-1} data-src="/video/ehub-loop-720.mp4" />
+                <video className="ehub-player" playsInline preload="none" poster="/images/ehub-trailer-1920.webp" aria-label="eHub product video" hidden />
+                <button className="ehub-play" type="button" aria-label="Play the selected eHub video with sound">
+                  <span className="ehub-play-ring" aria-hidden="true" />
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" /></svg>
+                </button>
+                <span className="ehub-screen-label mono" aria-hidden="true"><i />Watch · <b className="ehub-now">Product trailer 3:47</b></span>
+              </div>
+            </div>
+            <div className="ehub-tabs" role="group" aria-label="Choose an eHub video">
+              {EHUB_VIDEOS.map((v, i) => (
+                <button key={v.id} type="button" className="ehub-tab" data-video={i} aria-pressed={i === 0 ? 'true' : 'false'} data-src={v.src} data-poster={`/images/${v.poster}-1920.webp`} data-label={`${v.label} ${v.len}`}>
+                  <img src={`/images/${v.poster}-960.webp`} alt="" width="960" height="540" loading="lazy" decoding="async" />
+                  <span><b>{v.label}</b><span className="mono">{v.len}</span></span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="container ehub-ps">
+            <div className="ehub-problem" data-fade="">
+              <span className="eyebrow">The problem</span>
+              <h4>Campus events still run on chaos.</h4>
+              <p>Most colleges organise hackathons, workshops and fests through scattered tools — so students miss opportunities, payments leave no trail, and certificates can&apos;t be trusted.</p>
+              <ul>
+                <li><s>WhatsApp forwards</s><span>Missed opportunities</span></li>
+                <li><s>Paper registers</s><span>Lost records</span></li>
+                <li><s>Cash payments</s><span>No receipts</span></li>
+                <li><s>Hand-typed certificates</s><span>Can&apos;t be verified</span></li>
+              </ul>
+            </div>
+            <div className="ehub-solution" data-fade="">
+              <span className="eyebrow">The solution</span>
+              <h4>One platform, from announcement to certificate.</h4>
+              <p>eHub gives every role its own lane. Students discover, register, pay and walk in with a signed pass. Organizers publish events, track registrations, review payments and check people in at the gate. Judges score privately against a rubric, and certificates go only to verified attendees — each with a unique ID anyone can check, no login needed.</p>
+              <p>It runs on low-cost cloud infrastructure and on the phones people already carry, so any college can adopt it without new hardware.</p>
+            </div>
+          </div>
+
+          <div className="container ehub-flow-wrap">
+            <div className="stack-label"><span className="eyebrow">One platform, start to finish</span><span className="rule" /></div>
+            <ol className="ehub-flow" data-fade="">
+              {EHUB_FLOW.map(([t, d], i) => (
+                <li key={t} style={{ '--i': i }}><span className="ehub-node" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span><b>{t}</b><span>{d}</span></li>
+              ))}
+            </ol>
+          </div>
+
+          <div className="container ehub-features">
+            {EHUB_FEATURES.map(([n, t, d], i) => (
+              <article className="ehub-card" data-fade="" style={{ '--i': i % 3 }} key={t}>
+                <span className="mono">{n}</span><h3>{t}</h3><p>{d}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="container ehub-foot">
+            <ul className="ehub-facts" data-fade="">
+              <li><b>Live</b><span>since October 2026</span></li>
+              <li><b>Any phone</b><span>no new hardware</span></li>
+              <li><b>Low-cost</b><span>cloud any college can sustain</span></li>
+            </ul>
+            <div className="ehub-stack" data-fade="">
+              <span className="eyebrow">Built with</span>
+              <ul>{EHUB_STACK.map((s) => <li key={s}>{s}</li>)}</ul>
+            </div>
+            <div className="btn-row" data-fade="">
+              <External className="solid-pill" href={EHUB_LIVE}>Open live app <span aria-hidden="true">↗</span></External>
+              <External className="outline-pill" href={GITHUB}><GitHubIcon /> GitHub</External>
+            </div>
+          </div>
+        </article>
         </section>
 
         {/* LEARNING */}
@@ -207,6 +334,7 @@ export default function Page() {
               <div><dt>Learning at</dt><dd>NxtWave CCBP 4.0 · Vaagdevi College of Engineering</dd></div>
               <div><dt>Elsewhere</dt><dd className="socials">
                 <External className="icon-btn" href={LINKEDIN} aria-label="LinkedIn profile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9v9M6 6v.01M10 18v-5a3 3 0 0 1 6 0v5M10 9v9" /></svg></External>
+                <External className="icon-btn" href={GITHUB} aria-label="GitHub profile"><GitHubIcon /></External>
                 <a className="icon-btn" href={`mailto:${EMAIL}`} aria-label="Email"><MailIcon /></a>
               </dd></div>
             </dl>
