@@ -1,5 +1,6 @@
 import { Inter, Instrument_Serif, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
+import { PORTRAIT_SRCSET, PORTRAIT_SIZES } from '../lib/portrait';
 
 // Inter and JetBrains Mono are variable fonts: one file covers every weight.
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
@@ -31,7 +32,7 @@ export default function RootLayout({ children }) {
       <head>
         {/* Set before first paint so scroll-reveal styles apply without a flash. */}
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
-        <link rel="preload" href="/images/portrait.webp" as="image" type="image/webp" />
+        <link rel="preload" as="image" type="image/webp" imageSrcSet={PORTRAIT_SRCSET} imageSizes={PORTRAIT_SIZES} />
       </head>
       <body className="is-loading" suppressHydrationWarning>{children}</body>
     </html>

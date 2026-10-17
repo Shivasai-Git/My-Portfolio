@@ -6,6 +6,6 @@ artifacts/
 .lighthouse/
 .playwright-mcp/
 .openai/
-.vscode/
 *.tar.gz
 *.tgz
+config.bat
