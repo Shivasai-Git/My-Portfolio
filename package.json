@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev -p 4178",
-    "build": "next build",
-    "start": "npx serve@14 out -l 4178",
+    "dev": "node api.js && next dev -p 4178",
+    "build": "node api.js && next build",
+    "start": "node api.js && npx serve@14 out -l 4178",
     "images": "node scripts/optimize-images.mjs",
     "preview:legacy": "node server.mjs",
     "check": "node --check lib/portfolio.js"

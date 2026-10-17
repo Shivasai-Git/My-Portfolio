@@ -1,4 +1,5 @@
 import PortfolioEffects from '../components/PortfolioEffects';
+import { PORTRAIT_SRCSET, PORTRAIT_SIZES } from '../lib/portrait';
 
 const LINKEDIN = 'https://www.linkedin.com/in/shivasai-aillaboina-576900318/';
 const EMAIL = 'saillaboina@gmail.com';
@@ -114,7 +115,7 @@ export default function Page() {
         <section className="hero" id="home" aria-labelledby="hero-title">
           <canvas className="hero-stars" aria-hidden="true" />
           <canvas className="hero-portrait" aria-hidden="true" />
-          <img className="portrait-source" id="portrait-source" src="/images/portrait.webp" alt="Portrait of Shivasai Aillaboina" width="1000" height="1000" fetchPriority="high" decoding="async" />
+          <img className="portrait-source" id="portrait-source" src="/images/portrait-960.webp" srcSet={PORTRAIT_SRCSET} sizes={PORTRAIT_SIZES} alt="Portrait of Shivasai Aillaboina" width="1254" height="1254" fetchPriority="high" decoding="async" />
           <div className="hero-content">
             <h1 id="hero-title" className="hero-title metal">PORTFOLIO</h1>
             <div className="hero-bottom">
