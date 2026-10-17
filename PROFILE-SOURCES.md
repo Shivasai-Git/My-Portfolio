@@ -26,4 +26,6 @@ Certificate images are the original LinkedIn document preview images, approximat
 
 portrait.png is the high-resolution image attached directly by the user. portrait-cutout.png is a transparent background version made with the built-in image-generation tool. The prompt requested removal of only the olive background while preserving face, glasses, hair, clothing, pose, and framing. Minor generative texture changes are possible; retain portrait.png as the original. The webpage applies the monochrome tiled visual treatment at runtime.
 
+The live hero now uses `source-portrait/portrait-original.png` (the same photo, as supplied) with `source-portrait/portrait-matte.png`, an alpha matte made with rembg's BiRefNet-portrait model. The matte only adds transparency, so every visible pixel is the original photo. `npm run images` combines the two, cleans the edge colour and writes `public/images/portrait-{640,960,1254}.webp`.
+
 linkedin-cover.jpg is the cover image from the same profile, retained as a user asset. The website reference is https://demo.codeandchill.store/portfolio/; its owner's portrait, personal details, proprietary source, and project imagery were not copied.
