@@ -7,7 +7,7 @@ const GITHUB = 'https://github.com/Shivasai-Git';
 const EHUB_LIVE = 'https://ehub-64.vercel.app/';
 
 const NAV = [
-  ['home', 'Home'], ['about', 'About'], ['projects', 'Projects'], ['learning', 'Learning'],
+  ['home', 'Home'], ['about', 'About'], ['projects', 'Projects'], ['services', 'Services'], ['learning', 'Learning'],
   ['certificates', 'Certificates'], ['journey', 'Journey'], ['contact', 'Contact'],
 ];
 
@@ -75,7 +75,14 @@ const EHUB_FEATURES = [
   ['06', 'Roles & waitlists', 'Admins, coordinators, judges and volunteers each in their lane; smart waitlist promotion.'],
 ];
 
-const EHUB_STACK = ['React 19', 'TypeScript', 'Vite', 'React Router 7', 'TanStack Query', 'React-Bootstrap', 'SCSS', 'Razorpay'];
+const HIRE = [
+  ['01', 'Business websites', 'Fast, mobile-first websites for shops, clinics, restaurants and startups — with WhatsApp, Google Maps and contact forms built in.'],
+  ['02', 'Web apps', 'Booking systems, dashboards, admin panels and portals in React and Node.js — with logins, databases and online payments via Razorpay or UPI.'],
+  ['03', 'Fixes & redesigns', 'Slow, broken or outdated site? I fix the bugs, make it work on every phone and give it a modern look.'],
+];
+const QUOTE_WA = `https://wa.me/918143940217?text=${encodeURIComponent('Hi Shivasai, I need a website/web app. Can I get a quote?')}`;
+
+const EHUB_STACK =['React 19', 'TypeScript', 'Vite', 'React Router 7', 'TanStack Query', 'React-Bootstrap', 'SCSS', 'Razorpay'];
 
 const GitHubIcon = () => <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" /></svg>;
 const Arrow = () => <svg className="service-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 9v8H9" /></svg>;
@@ -238,10 +245,28 @@ export default function Page() {
             </div>
             <div className="btn-row" data-fade="">
               <External className="solid-pill" href={EHUB_LIVE}>Open live app <span aria-hidden="true">↗</span></External>
-              <External className="outline-pill" href={GITHUB}><GitHubIcon /> GitHub</External>
             </div>
           </div>
         </article>
+        </section>
+
+        {/* SERVICES */}
+        <section className="work hire" id="services" aria-labelledby="services-title">
+          <div className="container work-head">
+            <span className="eyebrow">Available for freelance work</span>
+            <h2 id="services-title" className="lines-heading lines-left lines-wide" data-lines=""><span><span className="metal">HIRE</span></span><span><span className="metal">ME</span></span></h2>
+          </div>
+          <div className="container ehub-features">
+            {HIRE.map(([n, t, d], i) => (
+              <article className="ehub-card" data-fade="" style={{ '--i': i }} key={t}>
+                <span className="mono">{n}</span><h3>{t}</h3><p>{d}</p>
+              </article>
+            ))}
+          </div>
+          <div className="container btn-row" data-fade="">
+            <External className="solid-pill" href={QUOTE_WA}>Get a free quote on WhatsApp <span aria-hidden="true">↗</span></External>
+            <a className="outline-pill" href="#projects">See my work</a>
+          </div>
         </section>
 
         {/* LEARNING */}
@@ -326,7 +351,7 @@ export default function Page() {
             <div className="contact-left" data-fade="">
               <span className="status-pill"><i />Let&apos;s connect</span>
               <h2 id="contact-title" className="metal contact-title">Get in touch</h2>
-              <p>Ideas, opportunities, internships or just a hello — I&apos;d love to hear from you. Email gets the fastest reply.</p>
+              <p>Need a website or web app? Tell me what you need and you&apos;ll get a fixed quote within 24 hours. Internships and opportunities welcome too.</p>
               <div className="btn-row"><a className="solid-pill" href={`mailto:${EMAIL}`}>Send an email <MailIcon /></a><External className="outline-pill" href={LINKEDIN}>LinkedIn <span aria-hidden="true">↗</span></External></div>
             </div>
             <dl className="contact-card" data-fade="">
