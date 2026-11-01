@@ -130,6 +130,10 @@ body.loaded .preloader { opacity: 0; visibility: hidden; }
 /* ---------- eHub: featured project ---------- */
 .work { padding-top: 140px; border-top: 1px solid var(--line); }
 .work-head .eyebrow { margin-bottom: 18px; }
+/* Services reuses the eHub card styles; --ehub is otherwise only defined inside .ehub */
+.hire { --ehub: #7376f2; padding-bottom: 120px; border-bottom: 1px solid var(--line); }
+.hire .ehub-features { margin-top: 70px; }
+.hire > .btn-row { margin-top: 40px; }
 /* Static colour fields: painted once with the section, no animated layers to composite while scrolling. */
 .ehub { --ehub: #7376f2; --ehub-2: #39b8fd; --ehub-navy: #16164a; position: relative; padding: 70px 0 120px; overflow: clip; border-bottom: 1px solid var(--line);
   background: radial-gradient(60vmax 50vmax at 0% 40%, rgba(40, 40, 140, .5), transparent 70%), radial-gradient(50vmax 40vmax at 100% 45%, rgba(96, 99, 238, .1), transparent 70%), radial-gradient(50vmax 40vmax at 40% 100%, rgba(57, 184, 253, .07), transparent 70%); }
